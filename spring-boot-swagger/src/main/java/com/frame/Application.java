@@ -9,10 +9,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Arrays;
 
+/** 继承了这个2个注解的作用 @SpringBootConfiguration @EnableAutoConfiguration */
 @SpringBootApplication
 public class Application {
 
     public static void main(String[] args) {
+        /** 启动项目 */
         SpringApplication.run(Application.class, args);
     }
 
@@ -24,9 +26,10 @@ public class Application {
 
             String[] beanNames = ctx.getBeanDefinitionNames();
             Arrays.sort(beanNames);
-            for (String beanName : beanNames) {
-                System.out.println(beanName);
-            }
+            Arrays.stream(beanNames).forEach(System.out::println);
+//            for (String beanName : beanNames) {
+//                System.out.println(beanName);
+//            }
 
         };
     }

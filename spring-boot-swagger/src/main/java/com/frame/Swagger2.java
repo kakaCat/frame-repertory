@@ -10,8 +10,9 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
+/** 作为配置注入 */
 @Configuration
+/** 引入这个配置 */
 @EnableSwagger2
 public class Swagger2 {
 
